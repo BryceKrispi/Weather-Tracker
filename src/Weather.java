@@ -24,16 +24,16 @@ public class Weather {
     //------------------------------------------------
     // Accessor methods to reurn instance data values
     //------------------------------------------------
+    public double getTemp(){
+        return temp;
+    }
+
     public double getPrecipitation(){
         return precipitation;
     }
 
     public String getPrecipitationType(){
         return precipitationType;
-    }
-
-    public double getTemp(){
-        return temp;
     }
 
     //-------------------------------------
@@ -47,7 +47,7 @@ public class Weather {
     }
 
     //-----------------
-    // toString method
+    // toString() method
     //-----------------
     @Override
     public String toString(){
