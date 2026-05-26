@@ -1,15 +1,20 @@
 //------------------------------------------------------------------
-// Class to hold and return data retrieved from the OpenWeather API
+// Class to hold and return data derived from the OpenWeather API
 //------------------------------------------------------------------
 package src;
 
 public class Weather {
 
-    double precipitation = 0.0; // Measurement in centimeters (cm)
-    String precipitationType = "none"; // If precipitation is 0, default to "none"
-    double temp; // Degrees in celsius (°C)
+    private double temp; // Degrees in celsius (°C)
+    private double precipitation = 0.0; // Measurement in centimeters (cm)
+    private String precipitationType = "none"; // If precipitation is 0, default to "none"
+    private final double MIN_TEMP = 0; // The minumum temperature in celsius (°C) to be "safe"
+    private final double MAX_TEMP = 40; // The maximum temperature in celsius (°C) to be "safe"
+    private final double MAX_PRECIPITATION = 10; // The maximum precipitation in centimeters (cm) to be "safe"
 
-    // Constructor
+    //--------------------
+    // Constructor method
+    //--------------------
     public Weather(double precipitation, String precipitationType, double temp){
         this.precipitation = precipitation;
         this.precipitationType = precipitationType;
@@ -31,16 +36,20 @@ public class Weather {
         return temp;
     }
 
+    //-------------------------------------
     // Returns if it is safe to go outside
+    //-------------------------------------
     public boolean isSafe(){
-        if (temp <= 0 || temp >= 40 || precipitation >= 10){
-            return false;
-        } else {
-            return true;
-        }
+        return ((temp <= MAX_TEMP && temp >= MIN_TEMP) &&
+                precipitation <= MAX_PRECIPITATION &&
+                !precipitationType.equals("hail"));
+       
     }
 
+    //-----------------
     // toString method
+    //-----------------
+    @Override
     public String toString(){
         if (isSafe() == false){
             // Not safe
