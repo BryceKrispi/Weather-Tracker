@@ -1,6 +1,8 @@
 //------------------------------------------------------------------
 // Class to hold and return data retrieved from the OpenWeather API
 //------------------------------------------------------------------
+package src;
+
 public class Weather {
 
     double precipitation = 0.0; // Measurement in centimeters (cm)
