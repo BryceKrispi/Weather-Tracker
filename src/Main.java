@@ -1,5 +1,10 @@
-package src;
+/* ------------------------------
+Use this to run: 
+javac -cp .:json.jar src/*.java
+java -cp .:json.jar src.Main
+------------------------------ */
 
+package src;
 import java.util.Scanner;
 
 public class Main {

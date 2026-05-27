@@ -51,14 +51,26 @@ public class Weather {
     //-----------------
     @Override
     public String toString(){
-        if (isSafe() == false){
-            // Not safe
-        return "There are " + precipitation + "cm of " + precipitationType + 
-                ", the temperature is " + temp + " °C." + " Do not go outside!";
+        if (precipitationType.equals("none")) {
+            if (isSafe() == false){
+                // Not safe
+                return "There is currently no precipitation. " + 
+                    ", the temperature is " + temp + " °C." + " Do not go outside!";
+            } else {
+                // Safe
+                return "There is currently no precipitation. " + 
+                    ", the temperature is " + temp + " °C." + " It is safe to go outside.";
+            }
         } else {
-            // Safe
+            if (isSafe() == false){
+                // Not safe
             return "There are " + precipitation + "cm of " + precipitationType + 
-                ", the temperature is " + temp + " °C." + " It is safe to go outside.";
+                    ", the temperature is " + temp + " °C." + " Do not go outside!";
+            } else {
+                // Safe
+                return "There are " + precipitation + "cm of " + precipitationType + 
+                    ", the temperature is " + temp + " °C." + " It is safe to go outside.";
+            }
         }
     }
 }
