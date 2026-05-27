@@ -20,7 +20,13 @@ public class Main {
             }
 
             WeatherAPI api = new WeatherAPI();
-            Weather weather = api.getWeather(city);
+
+            try {
+                Weather weather = api.getWeather(city);
+                System.out.println(weather);
+            } catch (Exception e) {
+                System.out.println("City not found, please try again.");
+            }
 
             System.out.println(weather);
         }

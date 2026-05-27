@@ -8,6 +8,7 @@ public class Weather {
     private double temp; // Degrees in celsius (°C)
     private double precipitation = 0.0; // Measurement in centimeters (cm)
     private String precipitationType = "none"; // If precipitation is 0, default to "none"
+    private String cityName = ""; // If precipitation is 0, default to "none"
     private final double MIN_TEMP = 0; // The minumum temperature in celsius (°C) to be "safe"
     private final double MAX_TEMP = 40; // The maximum temperature in celsius (°C) to be "safe"
     private final double MAX_PRECIPITATION = 10; // The maximum precipitation in centimeters (cm) to be "safe"
@@ -15,10 +16,11 @@ public class Weather {
     //--------------------
     // Constructor method
     //--------------------
-    public Weather(double precipitation, String precipitationType, double temp){
+    public Weather(double precipitation, String precipitationType, double temp, String cityName){
         this.precipitation = precipitation;
         this.precipitationType = precipitationType;
         this.temp = temp;
+        this.cityName = cityName;
     }
 
     //------------------------------------------------
@@ -55,11 +57,11 @@ public class Weather {
             if (isSafe() == false){
                 // Not safe
                 return "There is currently no precipitation. " + 
-                    ", the temperature is " + temp + " °C." + " Do not go outside!";
+                    "The temperature is " + temp + " °C." + " Do not go outside!";
             } else {
                 // Safe
                 return "There is currently no precipitation. " + 
-                    ", the temperature is " + temp + " °C." + " It is safe to go outside.";
+                    "The temperature is " + temp + " °C." + " It is safe to go outside.";
             }
         } else {
             if (isSafe() == false){
