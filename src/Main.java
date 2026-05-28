@@ -27,10 +27,7 @@ public class Main {
             } catch (Exception e) {
                 System.out.println("City not found, please try again.");
             }
-
-            System.out.println(weather);
         }
-
         scanner.close();
     }
 }
