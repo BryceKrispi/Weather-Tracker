@@ -66,11 +66,11 @@ public class Weather {
         } else {
             if (isSafe() == false){
                 // Not safe
-            return "There are " + precipitation + "cm of " + precipitationType + 
+            return "There are " + precipitation + " cm of " + precipitationType + 
                     ", the temperature is " + temp + " °C." + " Do not go outside!";
             } else {
                 // Safe
-                return "There are " + precipitation + "cm of " + precipitationType + 
+                return "There are " + precipitation + " cm of " + precipitationType + 
                     ", the temperature is " + temp + " °C." + " It is safe to go outside.";
             }
         }
