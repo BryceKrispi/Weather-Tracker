@@ -1,6 +1,6 @@
-//------------------------------------------------------------------
-// Class to hold and return data derived from the OpenWeather API
-//------------------------------------------------------------------
+//-----------------------------------------------------------------
+// Class to hold and return data derived from the WeatherAPI class
+//-----------------------------------------------------------------
 package src;
 
 public class Weather {
@@ -48,9 +48,9 @@ public class Weather {
        
     }
 
-    //-----------------
+    //-------------------
     // toString() method
-    //-----------------
+    //-------------------
     @Override
     public String toString(){
         if (precipitationType.equals("none")) {

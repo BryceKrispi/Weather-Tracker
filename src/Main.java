@@ -10,8 +10,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws Exception {
 
+        //---------------------------------------------
+        // Instantiates a scanner object to read input
+        //---------------------------------------------
         Scanner scanner = new Scanner(System.in);
         
+        //--------------------------------------------
+        // Accept inputs until the user enters "DONE"
+        //--------------------------------------------
         while (true) {
             System.out.print("Enter a city (or say DONE to quit): ");
             String city = scanner.nextLine();
@@ -19,8 +25,14 @@ public class Main {
                 break;
             }
 
+            //--------------------------
+            // Creates a new API object
+            //--------------------------
             WeatherAPI api = new WeatherAPI();
 
+            //--------------------------------------------------------
+            // Throws an exception if the user inputs an invalid city
+            //--------------------------------------------------------
             try {
                 Weather weather = api.getWeather(city);
                 System.out.println(weather);
