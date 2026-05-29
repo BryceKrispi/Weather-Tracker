@@ -72,7 +72,7 @@ public class WeatherAPI {
         String precipitationType = "none";
         if (conditionText.contains("rain"))       precipitationType = "rain";
         else if (conditionText.contains("snow"))  precipitationType = "snow";
-        else if (conditionText.contains("hail"))  precipitationType = "hail";
+        else if (conditionText.contains("thunder"))  precipitationType = "thunder";
         else if (conditionText.contains("sleet")) precipitationType = "sleet";
 
         //------------------------------------------
