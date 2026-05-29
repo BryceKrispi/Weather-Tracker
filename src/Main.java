@@ -1,8 +1,8 @@
-/* ------------------------------
-Use this to run: 
+/* -----------------------------------------------------------------------------
+Use this to run (as Java doesn't naturally recognize external org.json library) 
 javac -cp .:json.jar src/*.java
 java -cp .:json.jar src.Main
------------------------------- */
+----------------------------------------------------------------------------- */
 
 package src;
 import java.util.Scanner;
