@@ -64,7 +64,7 @@ public class Weather {
                     "The temperature is " + temp + " °C." + " It is safe to go outside.";
             }
         } else if (precipitationType.equals("thunder")) {
-            return "The temperature is " + temp + " °C." + " It is thundering. " + " Do not go outside!";
+            return "The temperature is " + temp + " °C." + " It is thundering, " + "do not go outside!";
         } else {
             if (isSafe() == false){
                 // Not safe
