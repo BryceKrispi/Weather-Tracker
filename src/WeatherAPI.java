@@ -65,6 +65,10 @@ public class WeatherAPI {
         System.out.println("Showing weather for: " + cityName);
 
         String conditionText = current.getJSONObject("condition").getString("text").toLowerCase();
+
+        //----------------
+        // Based on value extracted from API, determine precipitation type
+        //----------------
         String precipitationType = "none";
         if (conditionText.contains("rain"))       precipitationType = "rain";
         else if (conditionText.contains("snow"))  precipitationType = "snow";
@@ -72,7 +76,7 @@ public class WeatherAPI {
         else if (conditionText.contains("sleet")) precipitationType = "sleet";
 
         //-----------------------------------
-        // Build and RETURN a Weather object
+        // Using API values, build a weather object
         //-----------------------------------
         return new Weather(precipitation, precipitationType, temp, cityName);
     }
