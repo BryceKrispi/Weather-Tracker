@@ -44,7 +44,7 @@ public class Weather {
     public boolean isSafe(){
         return ((temp <= MAX_TEMP && temp >= MIN_TEMP) &&
                 precipitation <= MAX_PRECIPITATION &&
-                !precipitationType.equals("hail"));
+                !precipitationType.equals("thunder"));
        
     }
 
@@ -63,6 +63,8 @@ public class Weather {
                 return "There is currently no precipitation. " + 
                     "The temperature is " + temp + " °C." + " It is safe to go outside.";
             }
+        } else if (precipitationType.equals("thunder") {
+            return "The temperature is " + temp + " °C." + " It is thundering. " + " Do not go outside!";
         } else {
             if (isSafe() == false){
                 // Not safe
