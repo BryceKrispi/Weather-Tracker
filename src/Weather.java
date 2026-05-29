@@ -63,7 +63,7 @@ public class Weather {
                 return "There is currently no precipitation. " + 
                     "The temperature is " + temp + " °C." + " It is safe to go outside.";
             }
-        } else if (precipitationType.equals("thunder") {
+        } else if (precipitationType.equals("thunder")) {
             return "The temperature is " + temp + " °C." + " It is thundering. " + " Do not go outside!";
         } else {
             if (isSafe() == false){
