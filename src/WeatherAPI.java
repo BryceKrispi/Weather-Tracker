@@ -1,5 +1,7 @@
 //-----------------------------------------
 // Class to pull data from the Weather API
+// In this class, we utilized AI to learn how to call from APIs in Java. 
+// It generated us a sample script, which we modified and changed for our specific use case. 
 //-----------------------------------------
 package src;
 
